@@ -74,5 +74,12 @@
 			"}",
 		],
 		"description": "Duck base"
-	}
+	},
+	"Arrow function": {
+		"prefix": "arrow",
+		"body": [
+			"() => {}"
+		],
+		"description": "Arrow function"
+	},
 }
