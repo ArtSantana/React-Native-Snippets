@@ -1,0 +1,78 @@
+{
+	"React Native StyleSheet": {
+		"prefix": "rnstyle",
+		"body": [
+			"import {StyleSheet, Platform} from 'react-native';",
+			"import {",
+			"  widthPercentageToDP as wp,",
+			"  heightPercentageToDP as hp,",
+			"} from 'react-native-responsive-screen';",
+			"",
+			"export default StyleSheet.create({",
+			"",
+			"});"
+		],
+		"description": "Base for styles.js for component or page",
+	},
+	"React Native Hook Component": {
+		"prefix": "rncomponent",
+		"body": [
+			"import React, {useEffect, useState} from 'react';",
+			"import {View} from 'react-native';",
+			"import styles from './styles';",
+			"",
+			"export default function ${1}() {",
+			"  return (",
+			"    <View style={styles.container}>",
+			"      ${2}",
+			"    </View>",
+			"  );",
+			"}",
+		],
+		"description": "Base component with hooks"
+	},
+	"React Native Page Import": {
+		"prefix": "page",
+		"body": [
+			"import ${1:page} from './pages/${1:page}';",
+		],
+		"description": "import page for react navigation"
+	},
+	"React Navigation Stack Screen": {
+		"prefix": "stack-screen",
+		"body": [
+			"<Stack.Screen name=\"$1\" component={$2} />",
+		],
+		"description": "Stack Screen component"
+	},
+	"React Native Tabs Screen": {
+		"prefix": "tabs-screen",
+		"body": [
+			"<Tabs.Screen name=\"$1\" component={$2} />",
+		],
+		"description": "Tabs Screen component"
+	},
+	"Duck": {
+		"prefix": "duck",
+		"body": [
+			"export const Types = {",
+			"",
+			"};",
+			"",
+			"const INITIAL_STATE = {",
+			"",
+			"};",
+			"",
+			"export default function ${1:duck}(state = INITIAL_STATE, action) {",
+			"  switch(action.type) {",
+			"    default:",
+			"      return state;",
+			"  }",
+			"}",
+			"export const Creators = {",
+			"",
+			"}",
+		],
+		"description": "Duck base"
+	}
+}
