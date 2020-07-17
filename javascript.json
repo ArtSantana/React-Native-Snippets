@@ -78,8 +78,25 @@
 	"Arrow function": {
 		"prefix": "arrow",
 		"body": [
-			"() => {}"
+			"() => {$1}"
 		],
 		"description": "Arrow function"
 	},
+	"Responsive Screen DP": {
+		"prefix": "responsive",
+		"body": [
+			"import {",
+			"  widthPercentageToDP as wp,",
+			"  heightPercentageToDP as hp,",
+			"} from 'react-native-responsive-screen';",
+		],
+		"description": "import base for react-native-responsive-screen"
+	},
+	"Navigate to other page": {
+		"prefix": "nav",
+		"body": [
+			"navigation.navigate('$1')",
+		],
+		"description": "react navigation navigate"
+	}
 }
