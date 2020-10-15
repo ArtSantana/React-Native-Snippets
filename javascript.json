@@ -1,102 +1,112 @@
 {
-	"React Native StyleSheet": {
-		"prefix": "rnstyle",
-		"body": [
-			"import {StyleSheet, Platform} from 'react-native';",
-			"import {",
-			"  widthPercentageToDP as wp,",
-			"  heightPercentageToDP as hp,",
-			"} from 'react-native-responsive-screen';",
-			"",
-			"export default StyleSheet.create({",
-			"",
-			"});"
-		],
-		"description": "Base for styles.js for component or page",
-	},
-	"React Native Hook Component": {
-		"prefix": "rncomponent",
-		"body": [
-			"import React, {useEffect, useState} from 'react';",
-			"import {View} from 'react-native';",
-			"import styles from './styles';",
-			"",
-			"export default function ${1}() {",
-			"  return (",
-			"    <View style={styles.container}>",
-			"      ${2}",
-			"    </View>",
-			"  );",
-			"}",
-		],
-		"description": "Base component with hooks"
-	},
-	"React Native Page Import": {
-		"prefix": "page",
-		"body": [
-			"import ${1:page} from './pages/${1:page}';",
-		],
-		"description": "import page for react navigation"
-	},
-	"React Navigation Stack Screen": {
-		"prefix": "stack-screen",
-		"body": [
-			"<Stack.Screen name=\"$1\" component={$2} />",
-		],
-		"description": "Stack Screen component"
-	},
-	"React Native Tabs Screen": {
-		"prefix": "tabs-screen",
-		"body": [
-			"<Tabs.Screen name=\"$1\" component={$2} />",
-		],
-		"description": "Tabs Screen component"
-	},
-	"Duck": {
-		"prefix": "duck",
-		"body": [
-			"export const Types = {",
-			"",
-			"};",
-			"",
-			"const INITIAL_STATE = {",
-			"",
-			"};",
-			"",
-			"export default function ${1:duck}(state = INITIAL_STATE, action) {",
-			"  switch(action.type) {",
-			"    default:",
-			"      return state;",
-			"  }",
-			"}",
-			"export const Creators = {",
-			"",
-			"}",
-		],
-		"description": "Duck base"
-	},
-	"Arrow function": {
-		"prefix": "arrow",
-		"body": [
-			"() => {$1}"
-		],
-		"description": "Arrow function"
-	},
-	"Responsive Screen DP": {
-		"prefix": "responsive",
-		"body": [
-			"import {",
-			"  widthPercentageToDP as wp,",
-			"  heightPercentageToDP as hp,",
-			"} from 'react-native-responsive-screen';",
-		],
-		"description": "import base for react-native-responsive-screen"
-	},
-	"Navigate to other page": {
-		"prefix": "nav",
-		"body": [
-			"navigation.navigate('$1')",
-		],
-		"description": "react navigation navigate"
-	}
+  "React Native StyleSheet": {
+    "prefix": "rnstyle",
+    "body": [
+      "//import {StyleSheet, Platform} from 'react-native';",
+      "import styled from 'styled-components';",
+      "//import {",
+      "//  widthPercentageToDP as wp,",
+      "//  heightPercentageToDP as hp,",
+      "//} from 'react-native-responsive-screen';",
+      "",
+      "const Container = styled.View`",
+      "  height: 100%;",
+      "  width: 100%;",
+      "`;",
+      "",
+      "export {Container};"
+    ],
+    "description": "Base for styles.js for component or page"
+  },
+  "React Native Hook Component": {
+    "prefix": "rncomponent",
+    "body": [
+      "import React from 'react';",
+      "import {Container} from './styles';",
+      "",
+      "function ${1}() {",
+      "  return (",
+      "    <Container>",
+      "      <></>",
+      "    </Container>",
+      "  );",
+      "}",
+      "",
+      "export default $1;"
+    ],
+    "description": "Base component with hooks"
+  },
+  "React Native Page Import": {
+    "prefix": "page",
+    "body": ["import ${1:page} from './pages/${1:page}';"],
+    "description": "import page for react navigation"
+  },
+  "React Navigation Stack Screen": {
+    "prefix": "stack-screen",
+    "body": ["<Stack.Screen name=\"$1\" component={$1} />"],
+    "description": "Stack Screen component"
+  },
+  "React Native Tabs Screen": {
+    "prefix": "tabs-screen",
+    "body": ["<Tabs.Screen name=\"$1\" component={$1} />"],
+    "description": "Tabs Screen component"
+  },
+  "Duck": {
+    "prefix": "duck",
+    "body": [
+      "export const Types = {",
+      "",
+      "};",
+      "",
+      "const INITIAL_STATE = {",
+      "",
+      "};",
+      "",
+      "export default function ${1:duck}(state = INITIAL_STATE, action) {",
+      "  switch(action.type) {",
+      "    default:",
+      "      return state;",
+      "  }",
+      "}",
+      "export const Creators = {",
+      "",
+      "}"
+    ],
+    "description": "Duck base"
+  },
+  "Arrow function": {
+    "prefix": "arrow",
+    "body": ["() => {$1}"],
+    "description": "Arrow function"
+  },
+  "Responsive Screen DP": {
+    "prefix": "responsive",
+    "body": [
+      "import {",
+      "  widthPercentageToDP as wp,",
+      "  heightPercentageToDP as hp,",
+      "} from 'react-native-responsive-screen';"
+    ],
+    "description": "import base for react-native-responsive-screen"
+  },
+  "Navigate to other page": {
+    "prefix": "nav",
+    "body": ["navigation.navigate('$1')"],
+    "description": "react navigation navigate"
+  },
+  "Platform.OS for responsive HP": {
+    "prefix": "php",
+    "body": "Platform.OS === 'ios' ? hp($1): hp($2)",
+    "description": "Platform.OS for responsive HP"
+  },
+  "Platform.OS for responsive WP": {
+    "prefix": "pwp",
+    "body": "Platform.OS === 'ios' ? wp($1): wp($2)",
+    "description": "Platform.OS for responsive WP"
+  },
+  "Importing components in page folder": {
+    "prefix": "impcomp",
+    "body": "import $1 from '../../components/$1'",
+    "description": "Platform.OS for responsive WP"
+  }
 }
