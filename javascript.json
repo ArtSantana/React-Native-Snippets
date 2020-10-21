@@ -63,7 +63,7 @@
       "};",
       "",
       "export default function ${1:duck}(state = INITIAL_STATE, action) {",
-      "  switch(action.type) {",
+      "  switch (action.type) {",
       "    default:",
       "      return state;",
       "  }",
@@ -108,5 +108,15 @@
     "prefix": "impcomp",
     "body": "import $1 from '../../components/$1'",
     "description": "Platform.OS for responsive WP"
+  },
+  "useState call": {
+    "prefix": "usestate",
+    "body": "const [$1, set$1] = useState($2);",
+    "description": "fast useState call"
+  },
+  "useEffect call": {
+    "prefix": "useeffect",
+    "body": ["useEffect(() => {", "  $1", "}, []);"],
+    "description": "fast useEffect call"
   }
 }
