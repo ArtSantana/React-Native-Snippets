@@ -1,18 +1,4 @@
 {
-  "React Native StyleSheet": {
-    "prefix": "rnstyle",
-    "body": [
-      "import styled from 'styled-components';",
-      "",
-      "const Container = styled.View`",
-      "  height: 100%;",
-      "  width: 100%;",
-      "`;",
-      "",
-      "export {Container};"
-    ],
-    "description": "Base for styles.js for component or page"
-  },
   "React Native Hook Component": {
     "prefix": "rncomponent",
     "body": [
