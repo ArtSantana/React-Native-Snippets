@@ -2,12 +2,7 @@
   "React Native StyleSheet": {
     "prefix": "rnstyle",
     "body": [
-      "//import {StyleSheet, Platform} from 'react-native';",
       "import styled from 'styled-components';",
-      "//import {",
-      "//  widthPercentageToDP as wp,",
-      "//  heightPercentageToDP as hp,",
-      "//} from 'react-native-responsive-screen';",
       "",
       "const Container = styled.View`",
       "  height: 100%;",
@@ -24,7 +19,7 @@
       "import React from 'react';",
       "import {Container} from './styles';",
       "",
-      "function ${1}() {",
+      "const ${1}: React.FC = () => {",
       "  return (",
       "    <Container>",
       "      <></>",
@@ -32,14 +27,9 @@
       "  );",
       "}",
       "",
-      "export default $1;"
+      "export {$1};"
     ],
     "description": "Base component with hooks"
-  },
-  "React Native Page Import": {
-    "prefix": "page",
-    "body": ["import ${1:page} from './pages/${1:page}';"],
-    "description": "import page for react navigation"
   },
   "React Navigation Stack Screen": {
     "prefix": "stack-screen",
@@ -50,6 +40,11 @@
     "prefix": "tabs-screen",
     "body": ["<Tabs.Screen name=\"$1\" component={$1} />"],
     "description": "Tabs Screen component"
+  },
+  "React Native Drawer Screen": {
+    "prefix": "drawer-screen",
+    "body": ["<Drawer.Screen name=\"$1\" component={$1} />"],
+    "description": "Drawer Screen component"
   },
   "Duck": {
     "prefix": "duck",
@@ -104,14 +99,9 @@
     "body": "Platform.OS === 'ios' ? wp($1): wp($2)",
     "description": "Platform.OS for responsive WP"
   },
-  "Importing components in page folder": {
-    "prefix": "impcomp",
-    "body": "import $1 from '../../components/$1'",
-    "description": "Platform.OS for responsive WP"
-  },
   "useState call": {
     "prefix": "usestate",
-    "body": "const [$1, set$1] = useState($2);",
+    "body": "const [$1, set$2] = useState($3);",
     "description": "fast useState call"
   },
   "useEffect call": {
